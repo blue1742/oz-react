@@ -18,11 +18,19 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <div style={{ fontSize: '2rem', margin: '20px 0' }}>
+          Count: {count}
+        </div>
+        <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+          <button onClick={() => setCount((count) => count - 1)}>
+            -
+          </button>
+          <button onClick={() => setCount((count) => count + 1)}>
+            +
+          </button>
+        </div>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
@@ -32,4 +40,4 @@ function App() {
   )
 }
 
-export default App
+export default App 
